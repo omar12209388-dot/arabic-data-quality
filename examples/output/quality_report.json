@@ -1,0 +1,266 @@
+{
+  "generated_at": "2026-11-22T18:35:05+00:00",
+  "source": "samples.jsonl",
+  "samples": 12,
+  "errors": 1,
+  "warnings": 3,
+  "results": [
+    {
+      "id": "sample-01",
+      "expected": "ar",
+      "script": {
+        "letters": 46,
+        "arabic_ratio": 1.0,
+        "latin_ratio": 0.0
+      },
+      "dialect_guess": {
+        "variety": "unknown",
+        "confidence": "low",
+        "hits": {}
+      },
+      "findings": [],
+      "normalized": "القاهرة هي عاصمة مصر واكبر مدنها، وتقع على ضفاف نهر النيل."
+    },
+    {
+      "id": "sample-02",
+      "expected": "ar",
+      "script": {
+        "letters": 46,
+        "arabic_ratio": 1.0,
+        "latin_ratio": 0.0
+      },
+      "dialect_guess": {
+        "variety": "egyptian",
+        "confidence": "low",
+        "hits": {
+          "egyptian": [
+            "عايز"
+          ],
+          "levantine": [
+            "بكرة"
+          ]
+        }
+      },
+      "findings": [],
+      "normalized": "عايز اعرف مواعيد القطار من القاهرة للمنصورة بكرة الصبح."
+    },
+    {
+      "id": "sample-03",
+      "expected": "ar",
+      "script": {
+        "letters": 17,
+        "arabic_ratio": 0.0,
+        "latin_ratio": 0.0
+      },
+      "dialect_guess": {
+        "variety": "unknown",
+        "confidence": "low",
+        "hits": {}
+      },
+      "findings": [
+        {
+          "check": "mojibake",
+          "severity": "error",
+          "message": "6 likely misdecoded UTF-8 sequences (e.g. 'Ø§'); re-decode the source as UTF-8"
+        }
+      ],
+      "normalized": "Ø§Ù„Ù‚Ø§Ù‡Ø±Ø© Ø¹Ø§ØµÙ…Ø© Ù…ØµØ±"
+    },
+    {
+      "id": "sample-04",
+      "expected": "ar",
+      "script": {
+        "letters": 42,
+        "arabic_ratio": 1.0,
+        "latin_ratio": 0.0
+      },
+      "dialect_guess": {
+        "variety": "unknown",
+        "confidence": "low",
+        "hits": {}
+      },
+      "findings": [
+        {
+          "check": "diacritics",
+          "severity": "info",
+          "message": "diacritic ratio 2.4% of letters; fine for liturgical/learning text, noise for most NLP labels"
+        }
+      ],
+      "normalized": "النيل اطول انهار العالم تقريبا بطول حوالي 6650 كيلومتر."
+    },
+    {
+      "id": "sample-05",
+      "expected": "ar",
+      "script": {
+        "letters": 54,
+        "arabic_ratio": 1.0,
+        "latin_ratio": 0.0
+      },
+      "dialect_guess": {
+        "variety": "unknown",
+        "confidence": "low",
+        "hits": {}
+      },
+      "findings": [],
+      "normalized": "اجتماع المراجعة اتاجل ليوم الثلاثاء الساعة 3 عصرا بسبب ظروف طارئة."
+    },
+    {
+      "id": "sample-06",
+      "expected": "ar",
+      "script": {
+        "letters": 47,
+        "arabic_ratio": 1.0,
+        "latin_ratio": 0.0
+      },
+      "dialect_guess": {
+        "variety": "levantine",
+        "confidence": "high",
+        "hits": {
+          "levantine": [
+            "شو",
+            "هلق",
+            "بدي"
+          ]
+        }
+      },
+      "findings": [],
+      "normalized": "شو رايك نروح على المكتبة هلق؟ بدي استعير كتابين عن التاريخ."
+    },
+    {
+      "id": "sample-07",
+      "expected": "ar",
+      "script": {
+        "letters": 46,
+        "arabic_ratio": 1.0,
+        "latin_ratio": 0.0
+      },
+      "dialect_guess": {
+        "variety": "egyptian",
+        "confidence": "low",
+        "hits": {
+          "egyptian": [
+            "اوي"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "check": "diacritics",
+          "severity": "info",
+          "message": "diacritic ratio 2.2% of letters; fine for liturgical/learning text, noise for most NLP labels"
+        },
+        {
+          "check": "mixed_digits",
+          "severity": "warning",
+          "message": "2 Eastern Arabic-Indic and 2 Western digits in one string; normalize before numeric parsing"
+        }
+      ],
+      "normalized": "الطقس النهارده حلو اوي ودرجة الحرارة 25، بس الرطوبة 40% تقريبا."
+    },
+    {
+      "id": "sample-08",
+      "expected": "ar",
+      "script": {
+        "letters": 81,
+        "arabic_ratio": 1.0,
+        "latin_ratio": 0.0
+      },
+      "dialect_guess": {
+        "variety": "unknown",
+        "confidence": "low",
+        "hits": {}
+      },
+      "findings": [],
+      "normalized": "اهلا بكم في المؤتمر السنوي للذكاء الاصطناعي، ونرحب بجميع الحضور من مختلف الدول العربية والاجنبية."
+    },
+    {
+      "id": "sample-09",
+      "expected": "ar",
+      "script": {
+        "letters": 55,
+        "arabic_ratio": 0.0,
+        "latin_ratio": 1.0
+      },
+      "dialect_guess": {
+        "variety": "unknown",
+        "confidence": "low",
+        "hits": {}
+      },
+      "findings": [
+        {
+          "check": "code_switch",
+          "severity": "warning",
+          "message": "latin ratio 100% in Arabic-expected text; latin tokens: ['need', 'the', 'API', 'key', 'for', 'the']"
+        }
+      ],
+      "normalized": "I need the API key for the payment gateway integration by Thursday."
+    },
+    {
+      "id": "sample-10",
+      "expected": "mixed",
+      "script": {
+        "letters": 53,
+        "arabic_ratio": 0.755,
+        "latin_ratio": 0.245
+      },
+      "dialect_guess": {
+        "variety": "egyptian",
+        "confidence": "low",
+        "hits": {
+          "egyptian": [
+            "بتاع"
+          ],
+          "msa": [
+            "إن"
+          ]
+        }
+      },
+      "findings": [],
+      "normalized": "ابعتلي ال email بتاع العميل وقوله ان ال deadline اتاجل لاسبوع."
+    },
+    {
+      "id": "sample-11",
+      "expected": "ar",
+      "script": {
+        "letters": 60,
+        "arabic_ratio": 1.0,
+        "latin_ratio": 0.0
+      },
+      "dialect_guess": {
+        "variety": "unknown",
+        "confidence": "low",
+        "hits": {}
+      },
+      "findings": [
+        {
+          "check": "mixed_digits",
+          "severity": "warning",
+          "message": "7 Eastern Arabic-Indic and 2 Western digits in one string; normalize before numeric parsing"
+        }
+      ],
+      "normalized": "المريض محتاج متابعة دقيقة للعلامات الحيوية: النبض 80 والضغط 120/80 ودرجة الحرارة 37."
+    },
+    {
+      "id": "sample-12",
+      "expected": "ar",
+      "script": {
+        "letters": 92,
+        "arabic_ratio": 1.0,
+        "latin_ratio": 0.0
+      },
+      "dialect_guess": {
+        "variety": "unknown",
+        "confidence": "low",
+        "hits": {}
+      },
+      "findings": [
+        {
+          "check": "diacritics",
+          "severity": "info",
+          "message": "diacritic ratio 2.2% of letters; fine for liturgical/learning text, noise for most NLP labels"
+        }
+      ],
+      "normalized": "السلام عليكم ورحمة الله وبركاته، اهلا وسهلا بجميع المشاركين في البرنامج التدريبي الجديد الخاص بجودة البيانات."
+    }
+  ]
+}
